@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=555
+
+This script has a number of maps that intercept various motions and cause the current line to be highlighted.  It is a variant of <HiMtchBrkt.vim> (vimtip#177).
+
+    \hcli : initiate HiCurLine operation
+    \hcls : stop HiCurLine operation
+
+(see vimtip#411 to have HiCurLine automatically begin highlighting)
+
+HiCurLine.vim uses the HL_HiCurLine highlighting group (by default) to specify the highlighting of the current line.  One may change the highlighting group HiCurLine uses with the g:HL_HiCurLine variable.  By default,
+
+	let g:HL_HiCurLine= "HL_HiCurLine"
+
+and <HiCurLine.vim> will specify that group internally.  Otherwise, one may change the group used to whatever one wishes:
+
+	let g:HL_HiCurLine= "Search"
+	let g:HL_HiCurLine= "Function"
+
+etc.  The default highlighting is: (background is a setting, see :he 'bg')
+
+	background == dark : blue text on cyan background
+	background == light: cyan text on blue background
+
+(alpha/beta version available at http://mysite.verizon.net/astronaut/vim/index.html#HICURLINE)
+
